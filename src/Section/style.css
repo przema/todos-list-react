@@ -1,0 +1,30 @@
+.container {
+    background-color: white;
+    max-width: 1000px;
+    margin: 10px 0;
+}
+
+.container__title {
+    padding: 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container__body {
+    padding: 20px;
+}
+
+.container__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+@media (max-width: 767px) {
+    .container__header {
+        grid-template-columns: 1fr;
+    }
+}
