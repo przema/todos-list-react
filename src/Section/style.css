@@ -1,21 +1,21 @@
-.container {
+.section {
     background-color: white;
     max-width: 1000px;
     margin: 10px 0;
 }
 
-.container__title {
+.section__title {
     padding: 20px;
     margin: 0;
     font-size: 18px;
     font-weight: 700;
 }
 
-.container__body {
+.section__body {
     padding: 20px;
 }
 
-.container__header {
+.section__header {
     display: grid;
     grid-template-columns: 1fr auto;
     margin: 0 auto;
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 767px) {
-    .container__header {
+    .section__header {
         grid-template-columns: 1fr;
     }
 }
