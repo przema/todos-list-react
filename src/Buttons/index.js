@@ -1,15 +1,15 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = (props) => (
-    <div className="container__buttons">
-        {props.tasks.length > 0 && (
+const Buttons = ({ tasks, hideTasksDone }) => (
+    <div className="buttons">
+        {tasks.length > 0 && (
             <>
-                <button className="containerButtons__button">
-                    {props.hideTasksDone ? "Pokaż" : "Ukryj"} ukończone
+                <button className="buttons__button">
+                    {hideTasksDone ? "Pokaż" : "Ukryj"} ukończone
                 </button>
-                <button className="containerButtons__button"
-                    disabled={props.tasks.every(({ done }) => done)}>
+                <button className="buttons__button"
+                    disabled={tasks.every(({ done }) => done)}>
                     Ukończ wszystkie
                 </button>
             </>
