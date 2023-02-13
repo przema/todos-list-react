@@ -8,6 +8,15 @@ Simple ToDo List project without interactions yet.
 
 https://przema.github.io/todos-list-react/
 
+## Technologies
+
+- HTML
+- CSS
+- BEM
+- JavaScript
+- ES6+ features
+- React
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
