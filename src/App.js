@@ -8,10 +8,7 @@ import Header from "./Header";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "przejść na Reacta", done: false },
-    { id: 2, content: "wynieść śmieci", done: true },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -35,6 +32,22 @@ function App() {
     setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
   };
 
+  const addNewTask = (content) => {
+
+    if (content === "") {
+      return;
+    }
+
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1
+      }
+    ]);
+  };
+
   return (
     <>
       <Header
@@ -42,7 +55,7 @@ function App() {
       />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form />}
+        body={<Form addNewTask={addNewTask} />}
       />
       <Section
         title="Lista zadań"
