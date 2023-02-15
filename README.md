@@ -2,7 +2,7 @@
 
 ## Description
 
-Simple ToDo List project without interactions yet.
+Simple ToDo List project with interactions.
 
 ## Demo
 
